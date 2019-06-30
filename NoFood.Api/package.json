@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PattySantos/NoFood.git"
+    "url": "git+https://github.com/PattySantos/NoFoodNew.git"
   },
   "author": "Patricia Lima",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PattySantos/NoFood/issues"
   },
-  "homepage": "https://github.com/PattySantos/NoFood#readme"
+  "homepage": "https://github.com/PattySantos/NoFood#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
