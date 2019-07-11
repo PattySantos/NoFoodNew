@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-const categoriaModel = new schema({
+const CategoriaModel = new schema({
     titulo:{trim:true, index: true, required: true, type: String}, 
     descricao:{type: String},
     foto:{type:String, required: true },
@@ -10,7 +10,7 @@ const categoriaModel = new schema({
     dataCriacao:{type: Date, default: Date.now}
 },{versionKey: false});
 
-categoriaModel.pre('save', next => {
+CategoriaModel.pre('save', next => {
      let agora = new Date();
      if(!this.dataCriacao){
         this.dataCriacao = agora;
@@ -19,4 +19,4 @@ categoriaModel.pre('save', next => {
      }
     
 });
-module.exports = mongoose.model('Categoria', categoriaModel);
+module.exports = mongoose.model('Categoria', CategoriaModel);
