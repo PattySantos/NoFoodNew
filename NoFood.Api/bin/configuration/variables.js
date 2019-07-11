@@ -5,7 +5,8 @@ const variables ={
         port: process.env.port || 3000
     },
     Database:{
-        connection:process.env.connection || 'mongodb+srv://nofoodadmin:<bibito123@>@cluster0-fh1ty.mongodb.net/test?retryWrites=true&w=majority'
+        connection: process.env.connection || 'mongodb+srv://nofoodadmin:bibito123@cluster0-fh1ty.mongodb.net/test?retryWrites=true&w=majority'
+                                            
     }
 } 
 module.exports = variables;
