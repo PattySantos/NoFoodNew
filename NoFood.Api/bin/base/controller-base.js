@@ -4,7 +4,7 @@ exports.post = async (repository, validationContract, req, res)=>{
         if(!validationContract.isValid()){
             res.status(400).send({
                 message: 'Existem dados inválidos na sua requisição', 
-                validation: validationContract.error()}).end();
+                validation: validationContract.errors()}).end();
                 return;
         }
         let resultado = await repository.create(data);
@@ -22,7 +22,7 @@ exports.put = async(repository, validationContract, req, res)=>{
         if(!validationContract.isValid()){
             res.status(400).send({
                 message: 'Existem dados inválidos na sua requisição', 
-                validation: validationContract.error()}).end();
+                validation: validationContract.errors()}).end();
                 return;
         }
         let resultado = await repository.update(req.params.id, data);

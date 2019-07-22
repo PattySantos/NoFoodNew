@@ -20,6 +20,7 @@ mongoose.connect(variable.Database.connection,{useCreateIndex:true,useNewUrlPars
 //Configurando as rotas
 app.use('/api/categoria', categoriaRouter);
 app.use('/api/produto', produtoRouter);
+app.use('/api/usuario', usuarioRouter);
 
 //Exportando nossa Api
 module.exports = app;
